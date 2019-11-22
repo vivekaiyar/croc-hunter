@@ -35,7 +35,7 @@ volumes:[
         println "pipeline disabled"
         return
     }
-
+    //test
     // set additional git envvars for image tagging
     pipeline.gitEnvVars()
 
