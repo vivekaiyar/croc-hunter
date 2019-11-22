@@ -74,7 +74,7 @@ volumes:[
       container('helm') {
 
         // run helm chart linter
-        pipeline.helmLint(chart_dir)
+        //pipeline.helmLint(chart_dir)
 
         // run dry-run helm chart installation
         pipeline.helmDeploy(
