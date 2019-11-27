@@ -80,7 +80,7 @@ volumes:[
         pipeline.helmDeploy(
           dry_run       : true,
           name          : config.app.name,
-          namespace     : default,
+          namespace     : config.app.name,
           chart_dir     : chart_dir,
           set           : [
             "imageTag": image_tags_list.get(0),
