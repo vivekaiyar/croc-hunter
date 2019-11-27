@@ -64,8 +64,8 @@ volumes:[
     stage ('compile and test') {
 
       container('golang') {
-        //sh "go test -v -race ./..."
-        //sh "make bootstrap build"
+        sh "go test -v -race ./..."
+        sh "make bootstrap build"
       }
     }
 
@@ -73,8 +73,8 @@ volumes:[
 
       container('helm') {
 
-        // run helm chart linter
-        //pipeline.helmLint(chart_dir)
+        run helm chart linter
+        pipeline.helmLint(chart_dir)
 
         // run dry-run helm chart installation
         pipeline.helmDeploy(
